@@ -45,10 +45,8 @@ function draw() {
   background(bgImg);
   star.x= starBody.position.x
   star.y= starBody.position.y 
- console.log(star.y); 
- if(star.y > 470 && starBody.position.y > 470 )
- { Matter.Body.setStatic(starBody,true);
-  } 
+ 
+ 
   drawSprites();
  }
   
