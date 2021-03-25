@@ -43,7 +43,12 @@ function setup() {
 
 function draw() {
   background(bgImg);
-
+  star.x= starBody.position.x
+  star.y= starBody.position.y 
+ console.log(star.y); 
+ if(star.y > 470 && starBody.position.y > 470 )
+ { Matter.Body.setStatic(starBody,true);
+  } 
   drawSprites();
  }
   
@@ -59,12 +64,13 @@ function keyPressed() {
 	  else if(keyCode === RIGHT_ARROW){
 		fairy.x= fairy.x+5;
 	  }
-	  if (keyCode === DOWN_ARROW){
-		Matter.starBody.setStatic(starBody, false);
+	  if (keyCode === DOWN_ARROW) { 
+		Matter.Body.setStatic(starBody,false); } 
+		}
 		//var staroptions={
 		//	isStatic:false
-		 // }
+		  //}
 		 // starBody=Bodies.circle(starBody.position.x,starBody.position.y,5,5,staroptions);
-		 // World.add(world,star);}
-	  }
-	}
+		  //World.add(world,star);
+	
+
